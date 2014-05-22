@@ -1,0 +1,100 @@
+
+lib/prelude.h,1426
+#define PRELUDE_H2,18
+              INT_T,12,171
+              CHAR_T,13,192
+              FLOAT_T,14,214
+              STR_T,15,237
+            } RType;16,258
+  RType type;19,297
+    int i_datum;21,321
+    char c_datum;22,338
+    float f_datum;23,356
+    char * s_datum;24,375
+} GenericReturn;26,400
+  bool (*g_p)g_p30,436
+  bool (*i_p)i_p31,467
+  bool (*f_p)f_p32,488
+  bool (*c_p)c_p33,511
+  bool (*s_p)s_p34,533
+} PredicateDispatch;35,557
+void swap(41,664
+char * trim(50,940
+void rstdin_s(84,1582
+char rstdin_c(97,1867
+bool is_float_p(108,2195
+float rstdin_f(126,2707
+bool is_int_p 148,3260
+int rstdin_d(161,3626
+GenericReturn rstdin_g(188,4338
+GenericReturn with_validator_rstdin_g(223,5266
+int with_slimit_read_d(259,6371
+int with_ilimit_read_d(270,6665
+int with_islimit_read_d(281,6932
+bool y_or_n_p(299,7431
+void with_message_repeat(312,7857
+void repeat_till_user(322,8104
+int show_menu(329,8343
+void print_centered(342,8727
+void greedy_align_paragraph(356,9393
+bool contains_char_p(401,10624
+int median(414,10979
+void show_banner(426,11329
+char * str_reverse(443,11751
+char * str_append_c(460,12034
+bool d_in_range_p(471,12291
+void clrscr(478,12446
+void suspend(492,12703
+bool eq(505,12921
+bool eq_f(512,13072
+void prompt(521,13354
+void abort_if_null(542,13868
+FILE * obtain_file_handle(553,14126
+bool char_in_string_p(563,14408
+void print_menu_grid(576,14743
+
+agenda.h,405
+typedef struct tm TimeRecord;3,19
+typedef struct ScheduleRecord 5,50
+  int id;6,82
+  TimeRecord date;7,92
+  char title[title8,111
+  char desc[desc9,129
+} ScheduleRecord;10,147
+typedef struct SRListItem 12,166
+  ScheduleRecord elt;13,194
+  struct SRListItem * next;14,216
+} SRListItem;15,244
+typedef struct SRListHead 17,259
+  int len;18,287
+  SRListItem * head;19,298
+} SRListHead;20,319
+
+overflow.c,15
+int main(3,20
+
+rshift.c,95
+void print_bits(5,66
+uint32_t rot_rshift(15,282
+uint32_t rot_lshift(30,545
+int main(42,726
+
+agenda.c,562
+void usage(4,46
+SRListHead * push_sr(9,221
+ScheduleRecord * peek_elt(19,500
+void delete_sr_elt(30,756
+FILE * with_abort_load(55,1293
+int with_abort_is_int_and_to_int(77,1833
+ScheduleRecord with_abort_parse_record(87,2009
+SRListHead read_records_from_file(119,3042
+SRListHead schedule_load(128,3289
+void pretty_print_sr(142,3554
+void print_sr_redux(148,3742
+void display_schedule(154,3917
+ScheduleRecord new_record(162,4095
+void edit_help(183,4775
+void edit_record(190,5033
+void menu_help(236,6198
+void roll_the_intro(244,6477
+int main(310,8271
